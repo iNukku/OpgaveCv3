@@ -4,18 +4,15 @@ using System.Text;
 
 namespace OpgaveCv3
 {
-    public class AbstractKnife : IWeapon
+    public abstract class AbstractWeapon : IWeapon
     {
         private string weaponName;
         private int damage;
         public string WeaponName { get { return weaponName; } }
-        public int DoDamage()
-        {
-            Console.WriteLine($"Your {weaponName} does {damage} damage to your target!!!!");
-            return damage;
-        }
+        public int Damage { get { return damage; } }
+        public abstract int DoDamage();
 
-        public AbstractKnife(string name, int damage)
+        public AbstractWeapon(string name, int damage)
         {
             this.weaponName = name;
             this.damage = damage;
@@ -23,7 +20,7 @@ namespace OpgaveCv3
 
         public override string ToString()
         {
-            string returnString = $"Your knife is a {weaponName} and its basedamage is {damage}";
+            string returnString = $"Your Weapon is a {weaponName} and its basedamage is {damage}";
             return returnString;
         }
     }
