@@ -11,7 +11,11 @@ namespace OpgaveCv3
             Console.WriteLine(myArmor.ToString());
             myArmor.ReduceArmor(100);
             Console.WriteLine(myArmor.ToString());
+            // End create armor
 
+            IWeapon myKnife = new ButterflyKnife();
+            Console.WriteLine(myKnife.ToString());
+            myKnife.DoDamage();
 
             Console.ReadKey();
         }
