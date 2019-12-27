@@ -9,6 +9,8 @@ namespace OpgaveCv3
             //Create armor
             MarineArmor myArmor = new MarineArmor();
             Console.WriteLine(myArmor.ToString());
+            myArmor.ReduceArmor(100);
+            Console.WriteLine(myArmor.ToString());
 
 
             Console.ReadKey();
