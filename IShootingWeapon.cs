@@ -10,8 +10,6 @@ namespace OpgaveCv3
         int AmountOfBullitsInClip { get; }
         int ClipSize { get; }
 
-        int GetBullitsLeft();
-        int GetBullitsLeftInClip();
         void Reload();
     }
 }

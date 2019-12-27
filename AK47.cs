@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveCv3
 {
-    class SniperRifle : AbstractWeapon, IShootingWeapon
+    public class AK47 : AbstractWeapon, IShootingWeapon
     {
         private int amountOfBullits;
         private int amountOfBullitsInClip;
@@ -33,14 +33,14 @@ namespace OpgaveCv3
 
         public override int DoDamage()
         {
-            Console.WriteLine($"Bang !!!! Your {this.WeaponName} does {this.Damage} damage to your target!!!!");
+            Console.WriteLine($"pop !!!! Your {this.WeaponName} does {this.Damage} damage to your target!!!!");
             return this.Damage;
         }
-        public SniperRifle() : base("AWP Sniper Rifle", 436)
+        public AK47() : base("AK-47", 88)
         {
-            amountOfBullits = 24;
-            amountOfBullitsInClip = 7;
-            clipSize = 7;
+            amountOfBullits = 90;
+            amountOfBullitsInClip = 30;
+            clipSize = 30;
         }
     }
 }
