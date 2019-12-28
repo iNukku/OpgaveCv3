@@ -6,7 +6,7 @@ namespace OpgaveCv3
 {
     public enum ArmorType { light, medium, heavy };
     public enum Colour { red, green, blue}
-    interface IArmor
+    public interface IArmor
     {
         ArmorType Type { get; }
         int Value { get; }

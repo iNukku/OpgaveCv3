@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveCv3
 {
-    class SniperRifle : AbstractBigGun
+    public class SniperRifle : AbstractBigGun
     {
         public override int DoDamage()
         {
