@@ -30,9 +30,10 @@ namespace OpgaveCv3
             myAK.DoDamage();
 
             //Create grenade
-            IWeapon myGrenade = new FlashbangGrenade();
+            IWeapon myGrenade = new HEGrenade();
             Console.WriteLine(myGrenade.ToString());
             myGrenade.DoDamage();
+
 
             Console.ReadKey();
         }

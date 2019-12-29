@@ -15,6 +15,10 @@ namespace OpgaveCv3
         private IAutomaticWeapon autoGunSlot;
         private AbstractHandgun handgunSlot;
         private AbstractKnife knifeSlot;
+        private AbstractGrenade thrownSlotOne;
+        private AbstractGrenade thrownSlotTwo;
+        private AbstractGrenade thrownSlotThree;
+        private AbstractGrenade thrownSlotFour;
 
 
         public int Health { get { return health; } }
@@ -24,12 +28,17 @@ namespace OpgaveCv3
         public IAutomaticWeapon AutoGunSlot { get { return autoGunSlot; } }
         public AbstractHandgun HandgunSlot { get { return handgunSlot; } }
         public AbstractKnife KnifeSlot { get { return knifeSlot; } }
+        public AbstractGrenade ThrownSlotOne { get { return thrownSlotOne; } }
+        public AbstractGrenade ThrownSlotTwo { get { return thrownSlotTwo; } }
+        public AbstractGrenade ThrownSlotThree { get { return thrownSlotThree; } }
+        public AbstractGrenade ThrownSlotFour { get { return thrownSlotFour; } }
         public int DamageAmplifier { get { return damageAmplifier; } }
         public bool IsAlive {get { return isAlive; }}
 
         public int Attack()
         {
             int x = equippedWeapon.DoDamage() * damageAmplifier;
+            Console.WriteLine($"You deal {x} damage to your target");
             return x;
         }
 
