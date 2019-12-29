@@ -6,6 +6,7 @@ namespace OpgaveCv3
 {
     public abstract class AbstractUnit : IUnit
     {
+        private bool isAlive;
         private int health;
         private int damageAmplifier;
         private IWeapon equippedWeapon;
@@ -14,7 +15,7 @@ namespace OpgaveCv3
         private IAutomaticWeapon autoGunSlot;
         private AbstractHandgun handgunSlot;
         private AbstractKnife knifeSlot;
-        private bool isAlive;
+
 
         public int Health { get { return health; } }
         public IWeapon EquippedWeapon { get { return equippedWeapon; } }
@@ -28,7 +29,7 @@ namespace OpgaveCv3
 
         public int Attack()
         {
-            int x = equippedWeapon.DoDamage();
+            int x = equippedWeapon.DoDamage() * damageAmplifier;
             return x;
         }
 

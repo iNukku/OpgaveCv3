@@ -30,6 +30,7 @@ namespace OpgaveCv3
         public AbstractArmor(ArmorType armorType, Colour colour)
         {
             this.armorColour = colour;
+            type = armorType;
 
             switch (armorType)
             {
