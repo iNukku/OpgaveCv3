@@ -27,6 +27,20 @@ namespace OpgaveCv3
                 amountOfBullits = 0;
             }
         }
+
+        public override int DoDamage()
+        {
+            if (this.amountOfBullitsInClip > 0)
+            {
+                Console.WriteLine($"Boom - Your {this.WeaponName} fires !!!");
+                return this.Damage;
+            }
+            else
+            {
+                Console.WriteLine("Click.... You seem to be out of bullits");
+                return 0;
+            }
+        }
         public AbstractShootingWeapon(string name, int damage) : base(name, damage)
         {
         }

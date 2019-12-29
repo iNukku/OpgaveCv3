@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveCv3
 {
-    interface IAutomaticWeapon
+    public interface IAutomaticWeapon
     {
         //Indicate shots fired pr. second
         int RateOfFire { get; }

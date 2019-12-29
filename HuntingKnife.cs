@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveCv3
 {
-    public class HuntingKnife : AbstractWeapon
+    public class HuntingKnife : AbstractKnife
     {
 
         public override int DoDamage()

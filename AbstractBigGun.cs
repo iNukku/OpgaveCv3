@@ -6,6 +6,7 @@ namespace OpgaveCv3
 {
     public abstract class AbstractBigGun : AbstractShootingWeapon
     {
+
         public AbstractBigGun(string name, int damage) : base(name, damage)
         {
         }
