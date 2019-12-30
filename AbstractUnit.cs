@@ -67,13 +67,26 @@ namespace OpgaveCv3
             }
         }
 
+        public void ReloadWeapon()
+        {
+            try
+            {
+                AbstractShootingWeapon myshootingweapon = EquippedWeapon as AbstractShootingWeapon;
+                Console.WriteLine($"Amount of bullits in clip: {myshootingweapon.AmountOfBullitsInClip}");
+                myshootingweapon.Reload();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("You can not reload this weapon");
+            }
+        }
+
         public AbstractUnit(double dmgamp, IArmor armor, SniperRifle rifle, IAutomaticWeapon autoweapon, AbstractHandgun gun, AbstractKnife knife, AbstractGrenade grenadeone, AbstractGrenade grenadetwo, AbstractGrenade grenadethree, AbstractGrenade grenadefour) {
             this.isAlive = true;
             this.health = 100;
             this.damageAmplifier = dmgamp;
             this.unitArmor = armor;
             this.sniperSlot = rifle;
-            this.equippedWeapon = sniperSlot;
             this.autoGunSlot = autoweapon;
             this.handgunSlot = gun;
             this.knifeSlot = knife;
@@ -81,6 +94,7 @@ namespace OpgaveCv3
             this.thrownSlotTwo = grenadetwo;
             this.thrownSlotThree = grenadethree;
             this.thrownSlotFour = grenadefour;
+            this.equippedWeapon = knifeSlot;
         }
     }
 }
