@@ -9,7 +9,7 @@ namespace OpgaveCv3
         IWeapon EquippedWeapon { get; }
         IArmor UnitArmor { get; }
         SniperRifle SniperSlot { get; }
-        IAutomaticWeapon AutoGunSlot { get; }
+        AbstractShootingWeapon AutoGunSlot { get; }
         AbstractHandgun HandgunSlot { get; }
         AbstractKnife KnifeSlot { get; }
         AbstractGrenade ThrownSlotOne { get; }

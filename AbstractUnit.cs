@@ -12,7 +12,7 @@ namespace OpgaveCv3
         private IWeapon equippedWeapon;
         private IArmor unitArmor;
         private SniperRifle sniperSlot;
-        private IAutomaticWeapon autoGunSlot;
+        private AbstractShootingWeapon autoGunSlot;
         private AbstractHandgun handgunSlot;
         private AbstractKnife knifeSlot;
         private AbstractGrenade thrownSlotOne;
@@ -25,7 +25,7 @@ namespace OpgaveCv3
         public IWeapon EquippedWeapon { get { return equippedWeapon; } }
         public IArmor UnitArmor { get { return unitArmor; } }
         public SniperRifle SniperSlot { get { return sniperSlot; } }
-        public IAutomaticWeapon AutoGunSlot { get { return autoGunSlot; } }
+        public AbstractShootingWeapon AutoGunSlot { get { return autoGunSlot; } }
         public AbstractHandgun HandgunSlot { get { return handgunSlot; } }
         public AbstractKnife KnifeSlot { get { return knifeSlot; } }
         public AbstractGrenade ThrownSlotOne { get { return thrownSlotOne; } }
@@ -81,7 +81,7 @@ namespace OpgaveCv3
             }
         }
 
-        public AbstractUnit(double dmgamp, IArmor armor, SniperRifle rifle, IAutomaticWeapon autoweapon, AbstractHandgun gun, AbstractKnife knife, AbstractGrenade grenadeone, AbstractGrenade grenadetwo, AbstractGrenade grenadethree, AbstractGrenade grenadefour) {
+        public AbstractUnit(double dmgamp, IArmor armor, SniperRifle rifle, AbstractShootingWeapon autoweapon, AbstractHandgun gun, AbstractKnife knife, AbstractGrenade grenadeone, AbstractGrenade grenadetwo, AbstractGrenade grenadethree, AbstractGrenade grenadefour) {
             this.isAlive = true;
             this.health = 100;
             this.damageAmplifier = dmgamp;
@@ -94,7 +94,7 @@ namespace OpgaveCv3
             this.thrownSlotTwo = grenadetwo;
             this.thrownSlotThree = grenadethree;
             this.thrownSlotFour = grenadefour;
-            this.equippedWeapon = knifeSlot;
+            this.equippedWeapon = autoGunSlot;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace OpgaveCv3
 
 
             //Create AK
-            IAutomaticWeapon myAK = new AK47();
+            AbstractShootingWeapon myAK = new AK47();
 
             AbstractHandgun myUSP = new USP();
 
