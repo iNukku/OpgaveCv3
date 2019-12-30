@@ -66,5 +66,21 @@ namespace OpgaveCv3
                 Console.WriteLine("You are already dead!!!");
             }
         }
+
+        public AbstractUnit(int dmgamp, IArmor armor, SniperRifle rifle, IAutomaticWeapon autoweapon, AbstractHandgun gun, AbstractKnife knife, AbstractGrenade grenadeone, AbstractGrenade grenadetwo, AbstractGrenade grenadethree, AbstractGrenade grenadefour) {
+            this.isAlive = true;
+            this.health = 100;
+            this.damageAmplifier = dmgamp;
+            this.unitArmor = armor;
+            this.sniperSlot = rifle;
+            this.equippedWeapon = sniperSlot;
+            this.autoGunSlot = autoweapon;
+            this.handgunSlot = gun;
+            this.knifeSlot = knife;
+            this.thrownSlotOne = grenadeone;
+            this.thrownSlotTwo = grenadetwo;
+            this.thrownSlotThree = grenadethree;
+            this.thrownSlotFour = grenadefour;
+        }
     }
 }
