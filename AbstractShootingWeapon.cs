@@ -20,11 +20,13 @@ namespace OpgaveCv3
             {
                 amountOfBullitsInClip += missingbullitsInClip;
                 amountOfBullits -= missingbullitsInClip;
+                Console.WriteLine($"Reloaded weapon - your {WeaponName} now has {amountOfBullitsInClip} and you have {amountOfBullits} left");
             }
             else
             {
                 amountOfBullitsInClip += amountOfBullits;
                 amountOfBullits = 0;
+                Console.WriteLine($"bullits in clip: {amountOfBullitsInClip}; Bullits left: 0");
             }
         }
 
@@ -33,6 +35,7 @@ namespace OpgaveCv3
             if (this.amountOfBullitsInClip > 0)
             {
                 Console.WriteLine($"Boom - Your {this.WeaponName} fires !!!");
+                amountOfBullitsInClip--;
                 return this.Damage;
             }
             else

@@ -31,8 +31,19 @@ namespace OpgaveCv3
             AbstractGrenade myGrenade2 = new HEGrenade();
             AbstractGrenade myGrenade3 = new HEGrenade();
 
-            IUnit myMarine = new MarineUnit(myArmor, mySniper, myAK, myUSP, myKnife, myGrenade, myGrenade1, myGrenade2, myGrenade3);
+            IUnit myMarine = new MarineUnit(myArmor, mySniper, myAK, myUSP, myKnife, myGrenade, myGrenade1, myGrenade2, null);
             myMarine.Attack();
+            try
+            {
+                AbstractShootingWeapon myshootingweapon = myMarine.EquippedWeapon as AbstractShootingWeapon;
+                Console.WriteLine($"Amount of bullits in clip: {myshootingweapon.AmountOfBullitsInClip}");
+                myshootingweapon.Reload();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("You can not reload this weapon");
+            }
+
             int x = myMarine.Health;
             Console.WriteLine(x);
 
