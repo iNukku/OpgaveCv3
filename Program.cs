@@ -6,7 +6,7 @@ namespace OpgaveCv3
     {
         static void Main(string[] args)
         {
-            //Create armor
+
             MarineArmor myArmor = new MarineArmor();
             Console.WriteLine(myArmor.ToString());
             myArmor.ReduceArmor(100);
@@ -33,7 +33,6 @@ namespace OpgaveCv3
             IWeapon myGrenade = new HEGrenade();
             Console.WriteLine(myGrenade.ToString());
             myGrenade.DoDamage();
-
 
             Console.ReadKey();
         }

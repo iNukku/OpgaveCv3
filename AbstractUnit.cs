@@ -8,7 +8,7 @@ namespace OpgaveCv3
     {
         private bool isAlive;
         private int health;
-        private int damageAmplifier;
+        private double damageAmplifier;
         private IWeapon equippedWeapon;
         private IArmor unitArmor;
         private SniperRifle sniperSlot;
@@ -32,14 +32,14 @@ namespace OpgaveCv3
         public AbstractGrenade ThrownSlotTwo { get { return thrownSlotTwo; } }
         public AbstractGrenade ThrownSlotThree { get { return thrownSlotThree; } }
         public AbstractGrenade ThrownSlotFour { get { return thrownSlotFour; } }
-        public int DamageAmplifier { get { return damageAmplifier; } }
+        public double DamageAmplifier { get { return damageAmplifier; } }
         public bool IsAlive {get { return isAlive; }}
 
         public int Attack()
         {
-            int x = equippedWeapon.DoDamage() * damageAmplifier;
+            double x = equippedWeapon.DoDamage() * damageAmplifier;
             Console.WriteLine($"You deal {x} damage to your target");
-            return x;
+            return (int)Math.Floor(x);
         }
 
         public void switchWeapon(IWeapon nextWeapon)
@@ -67,7 +67,7 @@ namespace OpgaveCv3
             }
         }
 
-        public AbstractUnit(int dmgamp, IArmor armor, SniperRifle rifle, IAutomaticWeapon autoweapon, AbstractHandgun gun, AbstractKnife knife, AbstractGrenade grenadeone, AbstractGrenade grenadetwo, AbstractGrenade grenadethree, AbstractGrenade grenadefour) {
+        public AbstractUnit(double dmgamp, IArmor armor, SniperRifle rifle, IAutomaticWeapon autoweapon, AbstractHandgun gun, AbstractKnife knife, AbstractGrenade grenadeone, AbstractGrenade grenadetwo, AbstractGrenade grenadethree, AbstractGrenade grenadefour) {
             this.isAlive = true;
             this.health = 100;
             this.damageAmplifier = dmgamp;

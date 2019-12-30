@@ -18,7 +18,7 @@ namespace OpgaveCv3
         AbstractGrenade ThrownSlotFour { get; }
 
         int Health { get; }
-        int DamageAmplifier { get; }
+        double DamageAmplifier { get; }
         bool IsAlive { get; }
 
         void TakeDamage(int incommingDmg);
