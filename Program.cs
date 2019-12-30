@@ -8,31 +8,33 @@ namespace OpgaveCv3
         {
 
             MarineArmor myArmor = new MarineArmor();
-            Console.WriteLine(myArmor.ToString());
-            myArmor.ReduceArmor(100);
-            Console.WriteLine(myArmor.ToString());
+
             // End create armor
 
             //Create Knife
-            IWeapon myKnife = new ButterflyKnife();
-            Console.WriteLine(myKnife.ToString());
-            myKnife.DoDamage();
+            AbstractKnife myKnife = new ButterflyKnife();
+
             //End create Knife
 
             //Create Sniper
-            IWeapon mySniper = new SniperRifle();
-            Console.WriteLine(mySniper.ToString());
-            mySniper.DoDamage();
+            SniperRifle mySniper = new SniperRifle();
+
 
             //Create AK
-            IWeapon myAK = new AK47();
-            Console.WriteLine(myAK.ToString());
-            myAK.DoDamage();
+            IAutomaticWeapon myAK = new AK47();
+
+            AbstractHandgun myUSP = new USP();
 
             //Create grenade
-            IWeapon myGrenade = new HEGrenade();
-            Console.WriteLine(myGrenade.ToString());
-            myGrenade.DoDamage();
+            AbstractGrenade myGrenade = new HEGrenade();
+            AbstractGrenade myGrenade1 = new HEGrenade();
+            AbstractGrenade myGrenade2 = new HEGrenade();
+            AbstractGrenade myGrenade3 = new HEGrenade();
+
+            IUnit myMarine = new MarineUnit(myArmor, mySniper, myAK, myUSP, myKnife, myGrenade, myGrenade1, myGrenade2, myGrenade3);
+            myMarine.Attack();
+            int x = myMarine.Health;
+            Console.WriteLine(x);
 
             Console.ReadKey();
         }
