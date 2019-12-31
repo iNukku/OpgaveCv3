@@ -19,6 +19,8 @@ namespace OpgaveCv3
         private AbstractGrenade thrownSlotTwo;
         private AbstractGrenade thrownSlotThree;
         private AbstractGrenade thrownSlotFour;
+        private List<IWeapon> weaponpicker = new List<IWeapon>();
+        private int indexOfWeapon;
 
 
         public int Health { get { return health; } }
@@ -51,10 +53,20 @@ namespace OpgaveCv3
             return (int)Math.Floor(x);
         }
 
-        //TODO : Tjek for null + roter igennem våben
-        public void switchWeapon(IWeapon nextWeapon)
+        public void switchWeapon()
         {
-            throw new NotImplementedException();
+            if (indexOfWeapon < weaponpicker.Count -1)
+            {
+                Console.WriteLine($"Your {weaponpicker[indexOfWeapon].WeaponName} is switched out for {weaponpicker[indexOfWeapon + 1].WeaponName}");
+                indexOfWeapon++;
+                equippedWeapon = weaponpicker[indexOfWeapon];
+            }
+            else
+            {
+                indexOfWeapon = 0;
+                equippedWeapon = weaponpicker[indexOfWeapon];
+                Console.WriteLine($"You currently equip {equippedWeapon.WeaponName}");
+            }
         }
 
         public void TakeDamage(int incommingDmg)
@@ -105,6 +117,40 @@ namespace OpgaveCv3
             this.thrownSlotThree = grenadethree;
             this.thrownSlotFour = grenadefour;
             this.equippedWeapon = thrownSlotOne;
+            
+            if (sniperSlot != null)
+            {
+                weaponpicker.Add(sniperSlot);
+            }
+            if (autoGunSlot != null)
+            {
+                weaponpicker.Add(autoGunSlot);
+            }
+            if (handgunSlot != null)
+            {
+                weaponpicker.Add(handgunSlot);
+            }
+            if (knifeSlot != null)
+            {
+                weaponpicker.Add(knifeSlot);
+            }
+            if (thrownSlotOne != null)
+            {
+                weaponpicker.Add(thrownSlotOne);
+            }
+            if (thrownSlotTwo != null)
+            {
+                weaponpicker.Add(thrownSlotTwo);
+            }
+            if (ThrownSlotThree != null)
+            {
+                weaponpicker.Add(thrownSlotThree);
+            }
+            if (ThrownSlotFour != null)
+            {
+                weaponpicker.Add(thrownSlotFour);
+            }
+            indexOfWeapon = 0;
         }
     }
 }

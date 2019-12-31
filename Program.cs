@@ -38,6 +38,22 @@ namespace OpgaveCv3
             int x = myMarine.Health;
             Console.WriteLine(x);
 
+            myMarine.switchWeapon();
+            myMarine.switchWeapon();
+            myMarine.switchWeapon();
+            myMarine.Attack();
+            myMarine.switchWeapon();
+            myMarine.switchWeapon();
+            myMarine.switchWeapon();
+            myMarine.switchWeapon();
+            myMarine.Attack();
+            myMarine.switchWeapon();
+            myMarine.switchWeapon();
+            myMarine.switchWeapon();
+            myMarine.Attack();
+            myMarine.switchWeapon();
+
+
             Console.ReadKey();
         }
     }

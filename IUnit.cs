@@ -24,7 +24,7 @@ namespace OpgaveCv3
         void TakeDamage(int incommingDmg);
         int Attack();
         void ReloadWeapon();
-        void switchWeapon(IWeapon nextWeapon);
+        void switchWeapon();
 
     }
 }
