@@ -14,9 +14,9 @@ namespace OpgaveCv3
             return 0;
         }
 
-        public override void DoEffect()
+        public override string DoEffect()
         {
-            Console.WriteLine("Every opponent in front of you are blinded");
+            return "Every opponent in front of you are blinded";
         }
 
         public FlashbangGrenade() : base("Flashbang Grenade", 0)

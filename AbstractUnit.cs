@@ -39,9 +39,19 @@ namespace OpgaveCv3
         {
             double x = equippedWeapon.DoDamage() * damageAmplifier;
             Console.WriteLine($"You deal {x} damage to your target");
+            try
+            {
+                IThrown theweapon = EquippedWeapon as IThrown;
+                Console.WriteLine($"Extra effect: {theweapon.DoEffect()}");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("No other effect");
+            }
             return (int)Math.Floor(x);
         }
 
+        //TODO : Tjek for null + roter igennem våben
         public void switchWeapon(IWeapon nextWeapon)
         {
             throw new NotImplementedException();
@@ -94,7 +104,7 @@ namespace OpgaveCv3
             this.thrownSlotTwo = grenadetwo;
             this.thrownSlotThree = grenadethree;
             this.thrownSlotFour = grenadefour;
-            this.equippedWeapon = autoGunSlot;
+            this.equippedWeapon = thrownSlotOne;
         }
     }
 }

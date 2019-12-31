@@ -14,9 +14,9 @@ namespace OpgaveCv3
             return this.Damage;
         }
 
-        public override void DoEffect()
+        public override string DoEffect()
         {
-            Console.WriteLine("The bang is loud and ruins everyones hearing");
+            return "The bang is loud and ruins everyones hearing";
         }
 
         public HEGrenade() : base("He-Grenade", 99)

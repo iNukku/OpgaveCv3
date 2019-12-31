@@ -14,9 +14,9 @@ namespace OpgaveCv3
             return 0;
         }
 
-        public override void DoEffect()
+        public override string DoEffect()
         {
-            Console.WriteLine("After a few seconds the area is surrounded with smoke.");
+            return "After a few seconds the area is surrounded with smoke.";
         }
 
         public SmokeGrenade() : base("Smoke Grenade", 0)

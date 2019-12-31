@@ -6,6 +6,6 @@ namespace OpgaveCv3
 {
     public interface IThrown
     {
-        void DoEffect();
+        string DoEffect();
     }
 }
