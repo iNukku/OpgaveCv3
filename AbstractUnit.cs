@@ -45,6 +45,8 @@ namespace OpgaveCv3
             {
                 IThrown theweapon = EquippedWeapon as IThrown;
                 Console.WriteLine($"Extra effect: {theweapon.DoEffect()}");
+                switchWeapon();
+                weaponpicker.Remove(weaponpicker[indexOfWeapon - 1]);
             }
             catch (Exception)
             {
