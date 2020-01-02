@@ -6,6 +6,7 @@ namespace OpgaveCv3
 {
     public abstract class AbstractShootingWeapon : AbstractWeapon
     {
+        #region fields and properties
         protected int amountOfBullits;
         protected int amountOfBullitsInClip;
         protected int clipSize;
@@ -13,6 +14,9 @@ namespace OpgaveCv3
         public int AmountOfBullits { get { return amountOfBullits; } }
         public int AmountOfBullitsInClip { get { return amountOfBullitsInClip; } }
         public int ClipSize { get { return clipSize; } }
+
+        #endregion
+        #region public methods
         public virtual void Reload()
         {
             int missingbullitsInClip = clipSize - amountOfBullitsInClip;
@@ -44,8 +48,11 @@ namespace OpgaveCv3
                 return 0;
             }
         }
+        #endregion
+        #region constructors
         public AbstractShootingWeapon(string name, int damage) : base(name, damage)
         {
         }
+        #endregion
     }
 }

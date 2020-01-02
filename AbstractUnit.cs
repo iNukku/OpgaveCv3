@@ -6,6 +6,7 @@ namespace OpgaveCv3
 {
     public abstract class AbstractUnit : IUnit
     {
+        #region fields and properties
         private bool isAlive;
         private int health;
         private double damageAmplifier;
@@ -36,7 +37,8 @@ namespace OpgaveCv3
         public AbstractGrenade ThrownSlotFour { get { return thrownSlotFour; } }
         public double DamageAmplifier { get { return damageAmplifier; } }
         public bool IsAlive {get { return isAlive; }}
-
+        #endregion
+        #region public methods
         public int Attack()
         {
             double x = equippedWeapon.DoDamage() * damageAmplifier;
@@ -104,7 +106,9 @@ namespace OpgaveCv3
                 Console.WriteLine("You can not reload this weapon");
             }
         }
+        #endregion
 
+        #region Constructors
         public AbstractUnit(double dmgamp, IArmor armor, SniperRifle rifle, AbstractShootingWeapon autoweapon, AbstractHandgun gun, AbstractKnife knife, AbstractGrenade grenadeone, AbstractGrenade grenadetwo, AbstractGrenade grenadethree, AbstractGrenade grenadefour) {
             this.isAlive = true;
             this.health = 100;
@@ -154,5 +158,6 @@ namespace OpgaveCv3
             }
             indexOfWeapon = 0;
         }
+        #endregion
     }
 }

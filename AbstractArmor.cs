@@ -6,6 +6,7 @@ namespace OpgaveCv3
 {
     public abstract class AbstractArmor : IArmor
     {
+        #region fields and properties
         private ArmorType type;
         private int value;
         private Colour armorColour;
@@ -14,7 +15,9 @@ namespace OpgaveCv3
         public virtual int Value { get { return value; } }
 
         public virtual Colour ArmorColour { get { return armorColour; } }
+        #endregion
 
+        #region public methods
         public virtual void ReduceArmor(int damage)
         {
             value -= damage;
@@ -48,5 +51,6 @@ namespace OpgaveCv3
                     break;
             }
         }
+        #endregion
     }
 }
