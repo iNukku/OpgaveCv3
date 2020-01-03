@@ -10,7 +10,6 @@ namespace OpgaveCv3
         public override int DoDamage()
         {
             Console.WriteLine("You throw your smokeGrenade");
-            DoEffect();
             return 0;
         }
 

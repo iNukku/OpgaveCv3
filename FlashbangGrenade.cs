@@ -10,7 +10,6 @@ namespace OpgaveCv3
         public override int DoDamage()
         {
             Console.WriteLine("You Throw your flashbang grenade");
-            DoEffect();
             return 0;
         }
 

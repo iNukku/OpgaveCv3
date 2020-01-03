@@ -10,7 +10,6 @@ namespace OpgaveCv3
         public override int DoDamage()
         {
             Console.WriteLine("Your grenade explodes and fragments shatter all over the place");
-            DoEffect();
             return this.Damage;
         }
 
