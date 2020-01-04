@@ -12,30 +12,7 @@ namespace OpgaveCv3
             UnitDirector director = new MarineUnitDirector();
             IUnit theUnit = director.Build(builder);
 
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
-            theUnit.switchWeapon();
 
-            theUnit.Attack();
-            theUnit.switchWeapon();
-            theUnit.Attack();
-            theUnit.switchWeapon();
-            theUnit.Attack();
-            theUnit.switchWeapon();
-            theUnit.Attack();
-            theUnit.switchWeapon();
-            theUnit.Attack();
 
             Console.ReadKey();
         }

@@ -122,7 +122,7 @@ namespace OpgaveCv3
             this.thrownSlotTwo = grenadetwo;
             this.thrownSlotThree = grenadethree;
             this.thrownSlotFour = grenadefour;
-            this.equippedWeapon = thrownSlotOne;
+            this.equippedWeapon = sniperSlot;
             
             if (sniperSlot != null)
             {
