@@ -8,6 +8,9 @@ namespace OpgaveCv3
     {
         public USP() : base("USP-gun", 33)
         {
+            amountOfBullits = 30;
+            amountOfBullitsInClip = 13;
+            clipSize = 7;
         }
     }
 }

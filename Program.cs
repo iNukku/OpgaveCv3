@@ -13,6 +13,20 @@ namespace OpgaveCv3
             IUnit theUnit = director.Build(builder);
 
             theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+            theUnit.switchWeapon();
+
             theUnit.Attack();
             theUnit.switchWeapon();
             theUnit.Attack();

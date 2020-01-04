@@ -8,6 +8,9 @@ namespace OpgaveCv3
     {
         public DesertEagle() : base("Desert Eagle", 48)
         {
+            amountOfBullits = 35;
+            amountOfBullitsInClip = 7;
+            clipSize = 7;
         }
     }
 }
